@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    td,th {width: 150px;height: 150px;}
+    table {
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Text</th>
+            <th>Text</th>
+            <th colspan="2">Text</th>
+            <th colspan="2">Text</th>
+        </tr>
+        <tr>
+            <td c>Text</td>
+            <td style="text-align: left;" valign="bottom">Text</td>
+            <td colspan="2" style="text-align: right;" valign="bottom">Text</td>
+            <td style="text-align: center;">Text</td>
+            <td style="text-align: center;">Text</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center;">Text</td>
+            <td rowspan="2" style="text-align: left;" valign="top">Text</td>
+            <td style="text-align: left;" valign="top">Text</td>
+            <td style="text-align: left;" valign="top">Text</td>
+            <td style="text-align: center;">Text</td>
+            <td style="text-align: right;">Text</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center;">Text</td>
+            <td rowspan="2" style="text-align: center;">Text</td>
+            <td style="text-align: center;">Text</td>
+            <td style="text-align: center;">Text</td>
+        </tr>
+        <tr>
+            <td valign="bottom">Text</td>
+            <td>Text</td>
+            <td style="text-align: left;" valign="top">Text</td>
+            <td style="text-align: left;" valign="top">Text</td>
+        </tr>
+    </table>
+</body>
+</html>
