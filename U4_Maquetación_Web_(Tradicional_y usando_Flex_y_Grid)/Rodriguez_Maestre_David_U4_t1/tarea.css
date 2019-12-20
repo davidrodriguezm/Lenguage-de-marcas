@@ -1,0 +1,121 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0px auto;
+    width: 98%;
+}
+
+.cabecera {
+    background: black;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+}
+
+.cabe2 {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.cabe1 {
+    padding-top: 5px;
+    
+}
+
+.nave {
+    background-color: darkgreen;
+    overflow-y: auto;
+    color: white;
+
+}
+
+.nave div {
+    float: left;
+    margin: 5px;
+}
+
+.menu {
+    float: left;
+    background-color: lightgray;
+    margin-top: 15px;
+    width: 15%;
+    text-align: center;
+}
+
+.menu img {
+    width: 80%;
+    margin: 2px;
+}
+
+.centro {
+    width: 70%;
+    float: left;
+    margin-top: 25px;
+}
+.imagen {
+    width: 80%;
+    margin:  0px auto;
+}
+
+.imagen img {
+    width: 100%;
+
+}
+
+.lista {
+    background-color: lightgray;
+    position: relative;
+    border-color:  green;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.lista ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.lista img {
+    width: 10%;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.pie {
+    background-color: black;
+    text-align: center;
+    clear: left;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pie p {
+    color: white;
+}
+
+.calendario {
+    width: 15%;
+    float: left;
+    background-color: lightgray;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.calen img {
+    width: 70%;
+}
+
+.catego {
+    background-color: lightgray;
+    margin-top: 20px;
+}
