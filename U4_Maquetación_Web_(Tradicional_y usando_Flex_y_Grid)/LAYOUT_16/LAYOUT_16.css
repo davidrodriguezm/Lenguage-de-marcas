@@ -1,0 +1,140 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+.container {
+    margin: 0px auto;
+    width: 95%;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    background-color:lightgrey;
+    height: 100px;
+}
+
+.logo h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+.logo div {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.logo h2,h3 {
+    color: peru;
+}
+
+.logo h3 {
+    margin-left: 15px;
+}
+
+.imagen {
+    height: 250px;
+    position: relative;
+    background-image: url(img/escritorio.jpg);
+    background-size: contain;
+}
+
+.tex_imagen {
+    position: absolute;  
+    right: 120px; 
+    top: 40px;
+}
+
+.free {
+    color: gray;
+    font-size: 2.9rem;
+}
+
+.calendars {
+    color: mediumvioletred;
+    font-size: 5rem;
+}
+
+main {
+    overflow-y: auto;
+    padding-bottom: 2rem;
+    margin-bottom: 40px;
+}
+
+section {
+    float: left;
+    width: 65%;
+    margin-right: 5%;
+}
+
+.intro {
+    margin-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 15px;
+}    
+
+.intro h1 {
+    color: mediumvioletred;
+    font-size: 1.8rem;
+}    
+
+.sec_tex {
+    margin-top: 40px;
+}
+
+.galeria {
+    background-image: url(img/flores.jpg);
+    background-size: contain;
+    height: 180px;
+    margin-top: 20px;
+}
+
+aside {
+    float: left;
+    width: 28%;
+    margin-top: 10px;
+}
+
+aside h2 {
+    color: gray;
+}
+
+form input {
+    margin: 5px;
+    width: 100%;
+}
+
+form input[type="checkbox"] {
+    width: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form input[type="submit"] {
+    background-color:  mediumvioletred;
+    color: white;
+    width: 85%;
+    height: 40px;
+    scroll-margin-bottom: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}    
