@@ -1,0 +1,139 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+.container {
+    margin: 20px auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 115px 290px 530px;
+    font-family: 'PT Sans Narrow', sans-serif;    
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color:lightgrey;
+}
+
+.addice {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+header h2 {
+    color: peru;
+    padding-left: 20px;
+}
+
+.orchids {
+    margin-left: 15px;
+}
+
+.tex_imagen {
+    position: absolute;  
+    right: 120px; 
+    top: 50px;
+}
+
+.free {
+    color: gray;
+    font-size: 3.4rem;
+}
+
+.calendars {
+    color:  #7F277D;
+    font-size: 7.2rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: -40px;
+}
+
+main {
+    position: relative;
+    background-image: url(img/fondo2.jpg);
+    background-size: 100% 290px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section {
+    margin-right: 5%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 40px;
+}
+
+.intro {
+    margin-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 15px;
+}    
+
+.intro h1 {
+    color:  #7F277D;
+    font-size: 2.6rem;
+}    
+
+.sec_tex {
+    margin-top: 40px;
+}
+
+.galeria {
+    background-image: url(img/flores.jpg);
+    background-size: 100% 180px;
+    height: 180px;
+    margin-top: 20px;
+}
+
+aside {
+    margin-top: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 60px;
+}
+
+aside h2 {
+    color: gray;
+    font-size: 2.1rem;
+
+}
+
+form input {
+    margin: 5px;
+    width: 96%;
+}
+
+form input[type="checkbox"] {
+    width: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form input[type="submit"] {
+    background-color: #7F277D;
+    color: white;
+    width: 85%;
+    height: 40px;
+    scroll-margin-bottom: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}    
