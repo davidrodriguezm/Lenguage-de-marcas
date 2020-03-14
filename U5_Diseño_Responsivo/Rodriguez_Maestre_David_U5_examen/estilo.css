@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90% auto;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    height: 100px;
+}
+
+header i.fa {
+    padding: 10px;
+}
+
+.logo{
+    width: 40%;
+    height: 80%;
+}
+
+nav ul{
+    list-style: none;
+    display: none;
+}
+
+.busqueda{
+    display: none;
+}
+
+main{
+    width: 100%;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    text-align: center;
+    height: 300px;
+}
+
+.formulario{
+    background-color: white;
+    display: none;
+    color: black;
+    width: 50%;
+    margin: 0px auto;
+    height: 150px;
+    padding: 10px;
+}
+
+.for{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.for label,input{
+    width: 100%;
+}
+
+button{
+    background-color:rgb(209, 78, 122);
+    color: white;
+    opacity: 0.7;
+    margin-top: 15px;
+}
+
+.texabajo{
+    background-color: rgb(43, 43, 43);
+}
+
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.foto{
+    width: 50%;
+    padding: 5%;
+    background-color: white;
+}
+
+
+@media screen and (min-width: 576px) {
+
+    .formulario{
+        display: block;
+    }
+
+
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+
+    nav ul{
+        display: block;
+    }
+
+    header i.fa {
+        display: none;
+    }
+
+    .logo{
+        width: 30%;
+    }
+
+    .busqueda{
+        display: block;
+    }
+
+    .foto{
+        width: 25%;
+        padding: 5%;
+        background-color: white;
+    }
+
+
+}
