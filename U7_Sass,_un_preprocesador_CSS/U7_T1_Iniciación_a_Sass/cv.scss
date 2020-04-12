@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+$blanco: #fff;
+$negro: rgb(30, 30, 30);
+$todo: 100%;
+$mediano: 576px;
+$grande: 992px;
+
+@mixin tema_oscuro {
+    background-color: $negro;
+    color: $blanco;
+}
+
+@function anchura-col($num_col) {
+    @return (100/$num_col);
+}
+
+.container {
+    @include tema_oscuro;
+    display: flex;
+    flex-wrap: wrap;
+
+    & section {
+        width: #{anchura-col(1)}+"%";
+        padding: 2%;
+        margin-bottom: 20px;
+
+        & h2 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        & h3 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        & h3:hover {
+            font-size: 2rem;
+        }
+    }
+
+    & .otros {
+        display: none;
+    }
+}
+
+header {
+    width: $todo;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        font-size: 2rem;
+    }
+}
+
+$map_colores: (2:#78ff56, 3:#ff5656, 4:#56c9ff, 5:#c1c400);
+
+@each $clave,
+$valor in $map_colores {
+    section:nth-child(#{$clave}) h2 {
+        color: #{$valor};
+        border-bottom: 4px solid #{$valor};
+    }
+}
+
+
+@for $i from 2 through 8 {
+    @if $i%2 !=0 {
+        section.personales h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 2);
+        }
+    }
+}
+
+
+@for $i from 2 through 11 {
+    @if $i%2 !=0 {
+        .academicos h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 3);
+        }
+    }
+}
+
+@for $i from 2 through 6 {
+    @if $i%2 !=0 {
+        .experiencia h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 4);
+        }
+    }
+}
+
+@for $i from 2 through 4 {
+    @if $i%2 !=0 {
+        .otros h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 5);
+        }
+    }
+}
+
+@media screen and (min-width: $mediano) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .container section.otros {
+        display: block;
+    }
+}
+
+@media screen and (min-width: $grande) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .container section {
+        width: #{anchura-col(2)}+"%";
+    }
+
+}
