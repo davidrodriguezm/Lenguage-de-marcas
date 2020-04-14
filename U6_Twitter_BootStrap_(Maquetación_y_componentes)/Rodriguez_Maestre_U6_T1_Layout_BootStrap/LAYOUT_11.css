@@ -1,0 +1,19 @@
+div.container-fluid{
+    background-color: rgb(230, 230, 222);
+}
+
+.nombre{
+    background-color: black;
+}
+
+.nombre h1{
+    letter-spacing: 10px;
+}
+
+.texto{
+    line-height: 1.6rem;
+}
+
+form input[type="submit"]{
+    background-color: purple;
+}
