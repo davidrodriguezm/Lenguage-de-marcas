@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+$blanco: #fff;
+$negro: rgb(30, 30, 30);
+$todo: 100%;
+$mediano: 576px;
+$grande: 992px;
+$tema_oscuro: true;
+
+@mixin oscuro {
+    background-color: $negro;
+    color: $blanco;
+    border-color: $blanco;
+}
+
+@function calcularAnchura($num_col) {
+    @return (100/$num_col);
+}
+
+@for $i from 1 through 6 {
+
+    h#{$i} {
+        font-size: 25px;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @if $tema_oscuro == true {
+        @include oscuro();
+    }
+
+    & section {
+        width: #{calcularAnchura(1)}+"%";
+        padding: 2%;
+        margin-bottom: 20px;
+
+        & h2 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        & h3 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    & .otros {
+        display: none;
+    }
+
+    & section.DAW {
+
+        & h1 {
+            text-align: center;
+        }
+
+        & table {
+            border-collapse: collapse;
+            width: $todo;
+            margin-top: 20px;
+        }
+    }
+}
+
+header {
+    width: $todo;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        font-size: 2rem;
+    }
+}
+
+tr {
+
+    th {
+        border: 2px solid;
+    }
+
+    th:nth-child(1) h3 {
+        text-align: left;
+    }
+
+    th:nth-child(2) h3 {
+        text-align: right;
+    }
+
+    & h1 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    & h3 {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+$map_colores: (1:#fa883c, 2:#64ff56, 3:#ff5656, 4:#56c9ff, 5:#c1c400, 6:#a556ff, 7:#f156ff);
+
+@each $clave, $valor in $map_colores {
+
+    section:nth-child(#{$clave}) h2 {
+        color: #{$valor};
+        border-bottom: 4px solid #{$valor};
+    }
+}
+
+
+@for $i from 2 through 8 {
+
+    @if $i%2 !=0 {
+        section.personales h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 2);
+        }
+    }
+}
+
+
+@for $i from 2 through 11 {
+
+    @if $i%2 !=0 {
+        .academicos h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 3);
+        }
+    }
+}
+
+@for $i from 2 through 6 {
+
+    @if $i%2 !=0 {
+        .experiencia h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 4);
+        }
+    }
+}
+
+@for $i from 2 through 4 {
+
+    @if $i%2 !=0 {
+        .otros h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 5);
+        }
+    }
+}
+
+@each $clave, $valor in $map_colores {
+
+    tr:nth-child(#{$clave}) {
+        background-color: #{$valor};
+    }
+}
+
+@media screen and (min-width: $mediano) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .container section.otros {
+        display: block;
+    }
+}
+
+@media screen and (min-width: $grande) {
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .container section {
+        width: #{calcularAnchura(2)}+"%";
+    }
+
+}
