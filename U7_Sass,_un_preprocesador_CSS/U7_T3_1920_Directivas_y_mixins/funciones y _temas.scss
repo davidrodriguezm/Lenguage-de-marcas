@@ -1,0 +1,20 @@
+@mixin oscuro {
+    background-color: $negro;
+    color: $blanco;
+    border-color: $blanco;
+}
+
+@mixin centrar_elementos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin centrar_bloque {
+    width: 97%;
+    margin: auto;
+}
+
+@function calcularAnchura($num_col) {
+    @return (100/$num_col);
+}
