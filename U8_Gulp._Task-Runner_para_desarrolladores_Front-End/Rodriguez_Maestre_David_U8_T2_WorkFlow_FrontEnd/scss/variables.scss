@@ -1,0 +1,25 @@
+//// @access public
+//// @author DavidRM
+
+/// @group colores
+$blanco: #fff;
+
+/// @group colores
+$negro: rgb(30, 30, 30);
+
+/// @group dimensiones
+$todo: 100%;
+
+/// @group dimensiones
+$mediano: 576px;
+
+/// @group dimensiones
+$grande: 992px;
+
+/// Se encarga de cambiar el tema
+/// @group colores
+$tema_oscuro: false;
+
+/// Lista de colores
+/// @group colores
+$map_colores: (1:#fa883c,2:#f156ff, 3:#64ff56, 4:#ff5656, 5:#56c9ff, 6:#c1c400, 7:#a556ff);

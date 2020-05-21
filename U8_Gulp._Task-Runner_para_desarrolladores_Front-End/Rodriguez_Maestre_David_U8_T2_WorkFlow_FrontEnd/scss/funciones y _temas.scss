@@ -1,0 +1,35 @@
+//// @access public
+//// @author DavidRM
+
+/// Cambia el tema a oscuro
+/// @group colores
+/// @parameter {color} $negro
+/// @parameter {color} $blanco
+@mixin oscuro {
+    background-color: $negro;
+    color: $blanco;
+    border-color: $blanco;
+}
+
+/// sirve para centrar elementos
+/// @group dimensiones
+@mixin centrar_elementos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/// Sirve para centrar un bloque
+/// @group dimensiones
+@mixin centrar_bloque {
+    width: 97%;
+    margin: auto;
+}
+
+/// Calcula la anchura de los elementos
+/// @parameter {integer} $num_col Número de columnas
+/// @return {float} Porcentaje de devolución
+/// @group dimensiones
+@function calcularAnchura($num_col) {
+    @return (100/$num_col);
+}

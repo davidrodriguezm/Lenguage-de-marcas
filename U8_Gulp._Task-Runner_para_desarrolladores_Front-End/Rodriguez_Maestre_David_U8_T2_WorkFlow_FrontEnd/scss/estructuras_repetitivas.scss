@@ -1,0 +1,59 @@
+@for $i from 1 through 6 {
+
+    h#{$i} {
+        font-size: 25px;
+    }
+
+}
+
+@each $clave, $valor in $map_colores {
+
+    section:nth-child(#{$clave}) h2 {
+        color: #{$valor};
+        border-bottom: 4px solid #{$valor};
+    }
+}
+
+
+@for $i from 2 through 9 {
+
+    @if $i%2 ==0 {
+        section.personales h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 3);
+        }
+    }
+}
+
+@for $i from 2 through 12 {
+
+    @if $i%2 ==0 {
+        .academicos h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 4);
+        }
+    }
+}
+
+@for $i from 2 through 7 {
+
+    @if $i%2 ==0 {
+        .experiencia h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 5);
+        }
+    }
+}
+
+@for $i from 2 through 5 {
+
+    @if $i%2 ==0 {
+        .otros h3:nth-child(#{$i}) {
+            color: map-get($map_colores, 6);
+        }
+    }
+}
+
+@each $clave, $valor in $map_colores {
+
+    tr:nth-child(#{$clave}) {
+        background-color: #{$valor};
+    }
+}
